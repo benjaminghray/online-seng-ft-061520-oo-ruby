@@ -18,6 +18,8 @@ end
   - creating an instance of an object
   - scope comes into play - an instance of a class creates its own scope
   - we have a blueprint, the class, and instantiation means creating one of those things, bringing the object "to life"
+  - the class method `.new` is used to instantiate an object, such as `Breakfast.new`
+  - `.new` automatically calls the instance method `#initialize` if it is defined.  `#initialize` is optional, and usually used to add attributes when an object is instantiated.
 
 ## Ruby instance attributes
 - Instance variables begin with `@`
