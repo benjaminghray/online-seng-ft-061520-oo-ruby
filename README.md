@@ -19,6 +19,16 @@ end
   - scope comes into play - an instance of a class creates its own scope
   - we have a blueprint, the class, and instantiation means creating one of those things, bringing the object "to life"
 
-## Attributes of Ruby Classes
+## Ruby instance attributes
+- Instance variables begin with `@`
+- An instance variable is used to hold the value of an attribute of an instance of a class
+- Typically, getter and setter methods are used to access attributes of objects
+- A getter method, or just 'getter', simply returns the value of an attribute, which is held in an instance variable.
+- A setter method, or just 'setter', allows us to provide a new value as an argument, and assigns that value to the instance variable the represents the attribute
+- Getter and reader mean the same thing
+- Setter and writer mean the same thing
+- See `breakfast.rb` for examples of a getter and setter for a `@title` attribute
+- We can use the `attr_accessor`, `attr_reader`, and/or `attr_writer` macros to automatically generate getters and setters for us.
+
 
 ## Functionality of Ruby Classes

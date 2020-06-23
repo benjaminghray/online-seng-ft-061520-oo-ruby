@@ -13,11 +13,12 @@ require 'pry'
 # - nutrition facts
 # - style
 
-# adding an attribute, or a property, to a class...???
+# adding an attribute, or a property, to a class...
 # - add an initialize method
 # - build a reader and/or a writer
-# ... more advanced, use `attr_` macros
-# - add `attr_writer`, `attr_reader` or `attr_accessor`
+# ... more advanced, use `attr_` macros:
+#  `attr_writer`, `attr_reader` or `attr_accessor`
+# A macro is a method that adds methods.  In Ruby, `attr_accessor` gives us a reader and a writer method for each attribute we pass in as a symbol.
 
 # title, hot_or_cold, ingredients are the first 3 attributes
 class Breakfast
@@ -28,15 +29,16 @@ class Breakfast
     @ingredients = ingredients
     @hot = hot
   end
-  #
-  # # a reader, or getter, method for the title attribute
+
+  # Below are the generic manually-coded getter and setter methods for the title attribute.  This is exactly what we get with `attr_accessor :title`
+  # A reader, or getter, method for the title attribute
   # def title
   #   @title
   # end
-  #
-  # # a writer, or setter, method for the title attribute
-  # def title=(t)
-  #   @title = t
+
+  # A writer, or setter, method for the title attribute
+  # def title=(new_title)
+  #   @title = new_title
   # end
 end
 
@@ -44,7 +46,7 @@ end
 # How can I instantiate a new instance of Breakfast?
 # How can I create a Breakfast object?
 
-# what is .new????
+# what is .new????  .new is a class method.
 # It's the way we create a new Breakfast object, or a new Breakfast instance
 huevos_rancheros = Breakfast.new(
   "Huevos Rancheros",
