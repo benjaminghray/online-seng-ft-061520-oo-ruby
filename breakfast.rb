@@ -22,12 +22,19 @@ require 'pry'
 
 # title, hot_or_cold, ingredients are the first 3 attributes
 class Breakfast
-  attr_accessor :title, :ingredients, :hot
+  attr_accessor :title, :ingredients, :hot, :still_good
+
+  # #initialize is a very special instance method that's called when an object is instantiated, i.e. when we call .new (Breakfast.new(title, ingredients, hot), in this case)
 
   def initialize(title, ingredients, hot=true)
+    @still_good = true
     @title = title
     @ingredients = ingredients
-    @hot = hot
+    self.hot = hot
+  end
+
+  def self.ready_to_eat
+    puts "Another order of #{title} is ready! Come get it!"
   end
 
   # Below are the generic manually-coded getter and setter methods for the title attribute.  This is exactly what we get with `attr_accessor :title`
@@ -40,6 +47,20 @@ class Breakfast
   # def title=(new_title)
   #   @title = new_title
   # end
+
+  def spoil
+    # directly updating the instance attribute
+    # @hot = false
+    # use the setter method
+    self.hot = false
+    self.still_good = false
+    puts "Don't eat this #{title} anymore!"
+  end
+
+  def satisfy_your_hunger_and_energize_you
+    puts "Oh these #{ingredients} really get me going - no snickers needed here!"
+    "Now get out there and get something done!"
+  end
 end
 
 # 2 ways of asking the same thing:

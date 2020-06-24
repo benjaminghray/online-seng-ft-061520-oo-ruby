@@ -33,4 +33,17 @@ end
 - We can use the `attr_accessor`, `attr_reader`, and/or `attr_writer` macros to automatically generate getters and setters for us.
 
 
-## Functionality of Ruby Classes
+## Adding functionality to instance objects
+- use methods - for instances, we use instance methods
+
+### Instance method
+- instance methods are defined within the body of the class
+- syntax:
+```ruby
+class MyClass
+  # ...
+    def method_name(parameters)
+    # method body
+    end 
+end
+```
