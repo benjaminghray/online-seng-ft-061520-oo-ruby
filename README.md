@@ -42,8 +42,8 @@ end
 ```ruby
 class MyClass
   # ...
-    def method_name(parameters)
+  def method_name(parameters)
     # method body
-    end 
+  end 
 end
 ```
