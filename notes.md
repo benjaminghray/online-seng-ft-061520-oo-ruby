@@ -8,7 +8,6 @@
 - it should accomplish a single task <-- SRP "Single Responsibility Principle"
 - a function can be called, or invoked
 
-
 ### Method
 - a method is a function
 - a method is a function that belongs to an object
