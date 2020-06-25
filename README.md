@@ -36,7 +36,7 @@ end
 ## Adding functionality to instance objects
 - use methods - for instances, we use instance methods
 
-### Instance method
+### Instance methods
 - instance methods are defined within the body of the class
 - syntax:
 ```ruby
@@ -44,6 +44,26 @@ class MyClass
   # ...
   def method_name(parameters)
     # method body
-  end 
+    # inside an instance method, `self` refers to the INSTANCE
+  end
 end
 ```
+
+### Instance variables
+- syntax: an instance variable defined in an instance method and begins with `@`, such as `@title`
+- Scope: instance scope
+
+### Class methods
+- syntax:
+```ruby
+class MyClass
+  def self.method_name(args)
+    # method body
+    # inside a class method, `self` refers to the CLASS
+  end
+end
+```
+
+### Class variables
+- syntax: variable names begin with `@@`
+- scope: the entire class, and all methods
