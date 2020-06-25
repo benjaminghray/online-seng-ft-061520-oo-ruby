@@ -22,18 +22,35 @@ require 'pry'
 
 # title, hot_or_cold, ingredients are the first 3 attributes
 class Breakfast
+
   attr_accessor :title, :ingredients, :hot, :still_good
+
+  @@all = []
 
   # #initialize is a very special instance method that's called when an object is instantiated, i.e. when we call .new (Breakfast.new(title, ingredients, hot), in this case)
 
   def initialize(title, ingredients, hot=true)
+    # question:  right NOW, on line 34, what will @title, @ingredients, @hot, and @still_good
     @still_good = true
     @title = title
     @ingredients = ingredients
-    self.hot = hot
+    @hot = hot
+    @@all << self
   end
 
-  def self.ready_to_eat
+  def self.all
+    @@all
+  end
+
+  def self.print_all_breakfast_titles
+    all.each {|breakfast| puts breakfast.title }
+  end
+
+  def self.count
+    all.count
+  end
+
+  def ready_to_eat
     puts "Another order of #{title} is ready! Come get it!"
   end
 
@@ -73,6 +90,11 @@ huevos_rancheros = Breakfast.new(
   "Huevos Rancheros",
   "Eggs, sour cream, salsa, cheese, more cheese, toasted English muffins, hot sauce, chorizo, home fries, avocado",
   true
+)
+cereal = Breakfast.new(
+  "Cereal",
+  "cereal",
+  false
 )
 
 puts "huevos_rancheros is ", huevos_rancheros
