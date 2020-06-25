@@ -30,11 +30,14 @@ class Breakfast
   # #initialize is a very special instance method that's called when an object is instantiated, i.e. when we call .new (Breakfast.new(title, ingredients, hot), in this case)
 
   def initialize(title, ingredients, hot=true)
-    # question:  right NOW, on line 34, what will @title, @ingredients, @hot, and @still_good
+    # Q:  right NOW, on line 34, what will @title, @ingredients, @hot, and @still_good evaluate to?
+    # A: nil
     @still_good = true
     @title = title
     @ingredients = ingredients
     @hot = hot
+    # now all the attributes have values, in other words, the instance variables for this particular instance of breakfast have values other than nil
+    # add this particular instance into the class variable @@all, which is an array:
     @@all << self
   end
 
